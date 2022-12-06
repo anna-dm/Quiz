@@ -56,6 +56,17 @@ function clearPage() {
 
 
 function showQuestion() {
+  console.log('showQuestion');
 
-  questions[questionIndex]
+  // Вопрос
+  console.log(questions[questionIndex]['answers']);
+  const headerTemplate = `<h2 class="title">%title%</h2>`;
+  const title = headerTemplate.replace('%title%', questions[questionIndex]['answers']);
+
+
+  // Варианты ответов
+  for (item of questions[questionIndex]['answers']) {
+    console.log(item);
+
+  }
 }
